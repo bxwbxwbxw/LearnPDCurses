@@ -30,6 +30,30 @@ learn5: learn5.cpp
 learn6: learn6.cpp
 	make learn SRC=$@
 
+learn7: learn7.cpp
+	make learn SRC=$@
+
+learn8: learn8.cpp
+	make learn SRC=$@
+
+learn9: learn9.cpp
+	make learn SRC=$@
+
+learn10: learn10.cpp
+	make learn SRC=$@
+
+learn11: learn11.cpp
+	make learn SRC=$@
+
+learn12: learn12.cpp
+	make learn SRC=$@
+
+learn13: learn13.cpp
+	make learn SRC=$@
+
+learn14: learn14.cpp
+	make learn SRC=$@
+
 .PHONY: clean
 
 clean:
