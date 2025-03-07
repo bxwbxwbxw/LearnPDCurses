@@ -7,26 +7,28 @@ RM			= del
 
 all: learn1
 
+learn:
+	$(CC) -c -I.\include $(CFLAGS) $(SRC).cpp
+	+$(LINK) $(SRC),,,advapi32+lib\pdcurses$(LFLAGS)
+
 learn1: learn1.cpp
 	$(CC) -c -I.\include $(CFLAGS) $?
 	+$(LINK) $@,,,advapi32+lib\pdcurses$(LFLAGS)
 
 learn2: learn2.cpp
-	$(CC) -c -I.\include $(CFLAGS) $?
-	+$(LINK) $@,,,advapi32+lib\pdcurses$(LFLAGS)
+	make learn SRC=$@
 
 learn3: learn3.cpp
-	$(CC) -c -I.\include $(CFLAGS) $?
-	+$(LINK) $@,,,advapi32+lib\pdcurses$(LFLAGS)
+	make learn SRC=$@
 
 learn4: learn4.cpp
-	$(CC) -c -I.\include $(CFLAGS) $?
-	+$(LINK) $@,,,advapi32+lib\pdcurses$(LFLAGS)
+	make learn SRC=$@
 
 learn5: learn5.cpp
-	$(CC) -c -I.\include $(CFLAGS) $?
-	+$(LINK) $@,,,advapi32+lib\pdcurses$(LFLAGS)
+	make learn SRC=$@
 
+learn6: learn6.cpp
+	make learn SRC=$@
 
 .PHONY: clean
 
